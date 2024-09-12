@@ -1,0 +1,5 @@
+config BR2_PACKAGE_USBMUXD
+	bool "usbmuxd"
+	select BR2_PACKAGE_LIBUSBMUXD
+	select BR2_PACKAGE_LIBPLIST
+	select BR2_PACKAGE_LIBUSB

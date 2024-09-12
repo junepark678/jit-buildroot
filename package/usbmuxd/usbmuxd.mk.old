@@ -1,0 +1,7 @@
+USBMUXD_VERSION = 1.1.1
+USBMUXD_SITE = https://github.com/libimobiledevice/usbmuxd.git
+USBMUXD_SITE_METHOD = git
+USBMUXD_AUTORECONF = YES
+USBMUXD_DEPENDENCIES = libimobiledevice libusbmuxd libimobiledevice-glue
+
+$(eval $(autotools-package))

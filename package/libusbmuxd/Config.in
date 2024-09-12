@@ -1,0 +1,4 @@
+config BR2_PACKAGE_LIBUSBMUXD
+	bool "libusbmuxd"
+	depends on BR2_PACKAGE_LIBIMOBILEDEVICE_GLUE
+        select BR2_PACKAGE_LIBPLIST
