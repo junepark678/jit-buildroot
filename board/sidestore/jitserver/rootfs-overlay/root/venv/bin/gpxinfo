@@ -1,4 +1,4 @@
-#!/home/python/buildroot-2024.02.6/board/sidestore/jitserver/rootfs-overlay/root/venv/bin/python3.11
+#!/root/venv/bin/python3.12
 
 """
 Command line utility to extract basic statistics from gpx file(s)

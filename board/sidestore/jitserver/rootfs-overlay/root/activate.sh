@@ -5,6 +5,7 @@ echo "Welcome to JitStreamer!"
 echo "Starting the server. This might take a few seconds..."
 
 # Run tailscale up
+tailscaled &
 tailscale up
 
 # Get and display the Tailscale IPv4 address
@@ -15,7 +16,7 @@ echo "This will be your server IP: $TAILSCALE_IP"
 usbmuxd
 
 # Activate the virtual environment
-#. ./venv/bin/activate
+. ./venv/bin/activate
 
 # Run the JitStreamer binary
-/usr/bin/JitStreamer
+./venv/bin/JitStreamer
