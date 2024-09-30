@@ -4,15 +4,18 @@ BR2_TOOLCHAIN_BUILDROOT_VENDOR="pythonplayer123"
 BR2_TOOLCHAIN_BUILDROOT_MUSL=y
 BR2_KERNEL_HEADERS_6_6=y
 BR2_BINUTILS_VERSION_2_43_X=y
+BR2_GCC_VERSION_12_X=y
+BR2_EXTRA_GCC_CONFIG_OPTIONS="--enable-libgomp"
 BR2_TOOLCHAIN_BUILDROOT_CXX=y
+BR2_GCC_ENABLE_OPENMP=y
 BR2_GCC_ENABLE_GRAPHITE=y
-BR2_TARGET_OPTIMIZATION="-mtune=cortex-a76"
+BR2_TARGET_OPTIMIZATION="-mtune=cortex-a76 -funroll-loops -finline-functions -ftree-vectorize -fno-exceptions -floop-nest-optimize -floop-parallelize-all -ftree-loop-distribution -fopenmp-simd -floop-block -ftree-vectorize -ftree-vrp -fdelete-null-pointer-checks -fivopts -ftree-loop-ivcanon -fgraphite-identity "
 BR2_CCACHE=y
+BR2_CCACHE_DIR="/mnt/datadisk4/buildroot/buildroot-ccache"
 BR2_OPTIMIZE_FAST=y
 BR2_ENABLE_LTO=y
-# BR2_PIC_PIE is not set
+BR2_SHARED_STATIC_LIBS=y
 BR2_SSP_NONE=y
-BR2_RELRO_NONE=y
 BR2_TARGET_GENERIC_HOSTNAME="JITVM"
 BR2_TARGET_GENERIC_ISSUE="Welcome to JIToBR. Run `./activate.sh` to get started. :) made with <3 by pythonplayer123 under the the GNU AGPLv3"
 BR2_ROOTFS_MERGED_USR=y
