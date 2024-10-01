@@ -765,11 +765,11 @@ endif
 		{ echo "ERROR: we shouldn't have a /etc/ld.so.conf.d directory"; exit 1; } || true
 	mkdir -p $(TARGET_DIR)/etc
 	( \
-		echo "NAME=Buildroot"; \
+		echo "NAME=JITServer"; \
 		echo "VERSION=$(BR2_VERSION_FULL)"; \
-		echo "ID=buildroot"; \
+		echo "ID=jitserver"; \
 		echo "VERSION_ID=$(BR2_VERSION)"; \
-		echo "PRETTY_NAME=\"Buildroot $(BR2_VERSION)\"" \
+		echo "PRETTY_NAME=\"June's JITServer $(BR2_VERSION)\"" \
 	) >  $(TARGET_DIR)/usr/lib/os-release
 	ln -sf ../usr/lib/os-release $(TARGET_DIR)/etc
 
