@@ -1,11 +1,17 @@
 #!/bin/sh
 
+cd /root
+
+ip link set eth0 up
+udhcpc
+#chronyc -a makestep
+ntpdate pool.ntp.org
+
 # Display welcome message with additional information
 echo "Welcome to JitStreamer!"
 echo "Starting the server. This might take a few seconds..."
 
 # Run tailscale up
-tailscaled &
 tailscale up
 
 # Get and display the Tailscale IPv4 address

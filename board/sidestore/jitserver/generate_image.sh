@@ -14,5 +14,7 @@ genimage \
 	--inputpath "${BINARIES_DIR}"  \
 	--outputpath "${BINARIES_DIR}" \
 	--config "${GENIMAGE_CFG}"
+pushd ${BINARIES_DIR}
 
+zip ${BINARIES_DIR}/jitroot.qcow2.zip jitroot.qcow2
 exit $?

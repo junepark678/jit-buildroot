@@ -38,4 +38,7 @@ null::sysinit:/bin/ln -sf /proc/self/fd/2 /dev/stderr
 ::shutdown:/etc/init.d/rcK
 ::shutdown:/sbin/swapoff -a
 ::shutdown:/bin/umount -a -r
-console::respawn:-/bin/sh
+/dev/tty1::respawn:-/bin/sh /root/activate.sh
+/dev/tty2::respawn:-/bin/sh
+/dev/tty3::respawn:-/bin/tailscaled
+#/dev/tty4::respawn:-/sbin/chronyd
